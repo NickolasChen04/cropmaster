@@ -137,13 +137,16 @@ lib/
 
 ### Farm Management
 - Satallite view
+
 <table>
 <tr>
 <td><img src="Screenshots/SataliteFarmView.png" width="300" alt="Satellite Farm View"></td>
 </tr>
 <tr>
 </table>
+
 - Farm Details
+
 <table>
 <td><img src="Screenshots/FarmA_0.jpg" width="300" alt="Farm A"></td>
 <td><img src="Screenshots/FarmA_1.jpg" width="300" alt="Farm A"></td>
