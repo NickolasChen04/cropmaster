@@ -3,7 +3,6 @@ import 'package:photo_view/photo_view.dart';
 import 'setup_flow_page.dart';
 import 'farm_screen.dart';
 
-
 class FarmMapPage extends StatefulWidget {
   const FarmMapPage({super.key});
 
@@ -14,8 +13,8 @@ class FarmMapPage extends StatefulWidget {
 class _FarmMapPageState extends State<FarmMapPage> {
   final List<Farm> farms = [
     Farm(id: 'A', name: 'FARM A', type: 'Corn farm', position: const Offset(0.3, 0.4)),
-    Farm(id: 'B', name: 'FARM B', type: 'Rice farm', position: const Offset(0.5, 0.6)),
-    Farm(id: 'C', name: 'FARM C', type: 'Cabbage farm', position: const Offset(0.7, 0.3)),
+    Farm(id: 'B', name: 'FARM B', type: 'Apple farm', position: const Offset(0.5, 0.6)),
+    Farm(id: 'C', name: 'FARM C', type: 'Rice farm', position: const Offset(0.7, 0.3)),
   ];
 
   Farm? selectedFarm;
@@ -34,6 +33,19 @@ class _FarmMapPageState extends State<FarmMapPage> {
            farm.type.toLowerCase().contains(query) ||
            farm.id.toLowerCase().contains(query);
   }).toList();
+
+  void _navigateToFarmScreen(Farm farm) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => FarmScreen(
+          farmId: farm.id,
+          farmName: farm.name,
+          farmType: farm.type,
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,74 +76,64 @@ class _FarmMapPageState extends State<FarmMapPage> {
               height: 50,
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.1),
-                    blurRadius: 8,
-                    spreadRadius: 2,
+                    blurRadius: 10,
+                    spreadRadius: 1,
                   ),
                 ],
               ),
               child: TextField(
                 controller: _searchController,
+                decoration: InputDecoration(
+                  hintText: 'Search farms',
+                  prefixIcon: const Icon(Icons.search, color: Colors.grey),
+                  border: InputBorder.none,
+                  contentPadding: const EdgeInsets.symmetric(vertical: 15),
+                  suffixIcon: _searchQuery.isNotEmpty
+                      ? IconButton(
+                          icon: const Icon(Icons.clear, color: Colors.grey),
+                          onPressed: () {
+                            setState(() {
+                              _searchController.clear();
+                              _searchQuery = '';
+                            });
+                          },
+                        )
+                      : null,
+                ),
                 onChanged: (value) {
                   setState(() {
                     _searchQuery = value;
                   });
                 },
-                textAlignVertical: TextAlignVertical.center,
-                decoration: InputDecoration(
-                  hintText: 'Search farms...',
-                  hintStyle: const TextStyle(color: Colors.grey),
-                  prefixIcon: const Icon(Icons.search, color: Colors.grey),
-                  suffixIcon: _searchQuery.isNotEmpty
-                    ? IconButton(
-                        icon: const Icon(Icons.clear),
-                        onPressed: () {
-                          setState(() {
-                            _searchQuery = '';
-                            _searchController.clear();
-                          });
-                        },
-                      )
-                    : null,
-                  border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16),
-                  isDense: true,
-                ),
               ),
             ),
           ),
 
-          // Draggable Bottom Sheet
+          // Farm Markers section removed completely
+
+          // Bottom Sheet
           DraggableScrollableSheet(
-            initialChildSize: 0.3,
+            initialChildSize: 0.2,
             minChildSize: 0.1,
-            maxChildSize: 0.8,
+            maxChildSize: 0.7,
             builder: (context, scrollController) {
               return Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
-                  borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      blurRadius: 10,
-                      spreadRadius: 5,
-                    ),
-                  ],
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
                 ),
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Drag Handle
                     Container(
                       margin: const EdgeInsets.symmetric(vertical: 8),
                       width: 40,
                       height: 4,
                       decoration: BoxDecoration(
-                        color: Colors.grey[300],
+                        color: Colors.grey.shade300,
                         borderRadius: BorderRadius.circular(2),
                       ),
                     ),
@@ -142,26 +144,26 @@ class _FarmMapPageState extends State<FarmMapPage> {
                         children: [
                           ...filteredFarms.map((farm) => ListTile(
                             leading: CircleAvatar(
-                              child: Text(farm.id),
+                              backgroundColor: const Color(0xFF22C55E).withOpacity(0.7),
+                              child: Text(
+                                farm.id,
+                                style: const TextStyle(color: Colors.white),
+                              ),
                             ),
                             title: Text(farm.name),
                             subtitle: Text(farm.type),
-                            trailing: farm.id == 'C' 
-                              ? const Icon(Icons.warning, color: Colors.red)
-                              : null,
+                            trailing: farm.id == 'B' 
+                              ? const Icon(Icons.warning, color: Colors.orange)
+                              : (farm.id == 'C' 
+                                ? const Icon(Icons.warning, color: Colors.red)
+                                : null),
                             onTap: () {
                               setState(() {
                                 selectedFarm = farm;
                               });
                               
-                              if (farm.id == 'C') {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const FarmScreen(),
-                                  ),
-                                );
-                              }
+                              // Navigate to appropriate farm screen
+                              _navigateToFarmScreen(farm);
                             },
                           )),
                           if (filteredFarms.isEmpty)
@@ -178,6 +180,8 @@ class _FarmMapPageState extends State<FarmMapPage> {
                               ),
                             ),
                           if (filteredFarms.isNotEmpty) ...[
+                            const SizedBox(height: 20),
+                            const Divider(),
                             const SizedBox(height: 20),
                             Center(
                               child: GestureDetector(
@@ -219,4 +223,4 @@ class Farm {
     required this.type,
     required this.position,
   });
-} 
+}

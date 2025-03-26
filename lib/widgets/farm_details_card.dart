@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 
 class FarmDetailsCard extends StatelessWidget {
-  const FarmDetailsCard({super.key});
+  final String farmName;
+  final String farmType;
+  final String cropType;
+  final String totalArea;
+  final String plantingDate;
+  final bool showPlantingWarning;
+
+  const FarmDetailsCard({
+    super.key,
+    required this.farmName,
+    required this.farmType,
+    required this.cropType,
+    required this.totalArea,
+    required this.plantingDate,
+    this.showPlantingWarning = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,18 +45,18 @@ class FarmDetailsCard extends StatelessWidget {
               borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
               color: Colors.white,
             ),
-            child: const Stack(
+            child: Stack(
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                   child: Row(
                     children: [
-                      Icon(Icons.eco_outlined, 
+                      const Icon(Icons.eco_outlined, 
                       color: Colors.black, size: 24),
-                      SizedBox(width: 8),
+                      const SizedBox(width: 8),
                       Text(
-                        'FARM C',
-                        style: TextStyle(
+                        farmName,
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
@@ -78,13 +93,13 @@ class FarmDetailsCard extends StatelessWidget {
                       icon: Icons.landscape,
                       iconColor: Colors.green.shade700,
                       label: 'Farm Type',
-                      value: 'Rice Paddy',
+                      value: farmType,
                     ),
                     _buildDetailTile(
                       icon: Icons.grass,
                       iconColor: Colors.green,
                       label: 'Crop Type',
-                      value: 'Rice (MR219 variety)',
+                      value: cropType,
                     ),
                   ],
                 ),
@@ -98,14 +113,14 @@ class FarmDetailsCard extends StatelessWidget {
                       icon: Icons.area_chart,
                       iconColor: Colors.amber.shade700,
                       label: 'Total Area',
-                      value: '15 hectares',
+                      value: totalArea,
                     ),
                     _buildDetailTile(
                       icon: Icons.calendar_month,
                       iconColor: Colors.red,
                       label: 'Planting Date',
-                      value: 'January 10, 2025',
-                      showWarning: true,
+                      value: plantingDate,
+                      showWarning: showPlantingWarning,
                     ),
                   ],
                 ),
@@ -169,4 +184,4 @@ class FarmDetailsCard extends StatelessWidget {
       ),
     );
   }
-} 
+}
