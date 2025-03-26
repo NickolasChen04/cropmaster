@@ -109,22 +109,42 @@ lib/
 ## 📱 Screenshots
 
 ### Authentication
-<img src="Screenshots/Login.png" width="300" alt="Login Screen">
+<table>
+<tr>
+<td><img src="Screenshots/Login.png" width="300" alt="Login Screen"></td>
+</tr>
+</table>
 
 ### Home Page
-<img src="Screenshots/HomePage_0.png" width="300" alt="Home Page Overview">
-<img src="Screenshots/HomePage_Today'sTask.png" width="300" alt="Today's Tasks">
+<table>
+<tr>
+<td><img src="Screenshots/HomePage_0.png" width="300" alt="Home Page Overview"></td>
+<td><img src="Screenshots/HomePage_Today'sTask.png" width="300" alt="Today's Tasks"></td>
+</tr>
+</table>
 
 ### Farm Setup Flow
-<img src="Screenshots/FarmSetup_0.png" width="300" alt="Farm Setup Step 1">
-<img src="Screenshots/FarmSetup_1.png" width="300" alt="Farm Setup Step 2">
-<img src="Screenshots/FarmSetup_2.png" width="300" alt="Farm Setup Step 3">
-<img src="Screenshots/FarmSetup_3.png" width="300" alt="Farm Setup Step 4">
+<table>
+<tr>
+<td><img src="Screenshots/FarmSetup_0.png" width="300" alt="Farm Setup Step 1"></td>
+<td><img src="Screenshots/FarmSetup_1.png" width="300" alt="Farm Setup Step 2"></td>
+</tr>
+<tr>
+<td><img src="Screenshots/FarmSetup_2.png" width="300" alt="Farm Setup Step 3"></td>
+<td><img src="Screenshots/FarmSetup_3.png" width="300" alt="Farm Setup Step 4"></td>
+</tr>
+</table>
 
 ### Farm Management
-<img src="Screenshots/SataliteFarmView.png" width="300" alt="Satellite Farm View">
-<img src="Screenshots/FarmDetails.png" width="300" alt="Farm Details">
-<img src="Screenshots/AI_Insights.png" width="300" alt="AI Insights">
+<table>
+<tr>
+<td><img src="Screenshots/SataliteFarmView.png" width="300" alt="Satellite Farm View"></td>
+<td><img src="Screenshots/FarmDetails.png" width="300" alt="Farm Details"></td>
+</tr>
+<tr>
+<td><img src="Screenshots/AI_Insights.png" width="300" alt="AI Insights"></td>
+</tr>
+</table>
 
 ## 🔧 Configuration
 
