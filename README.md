@@ -109,10 +109,10 @@ lib/
 ## 📱 Screenshots
 
 ### Authentication
-![Login Screen](screenshots/Login.png)
+![Login Screen](Screenshots/Login.png)
 
 ### Home Page
-![Home Page Overview](screenshots/HomePage_0.png)
+![Home Page Overview](Screenshots/HomePage_0.png)
 ![Today's Tasks](screenshots/HomePage_Today'sTask.png)
 
 ### Farm Setup Flow
