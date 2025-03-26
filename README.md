@@ -52,7 +52,7 @@ lib/
 ## 👥 Team Members
 
 - Foo Ming Kuang
-- Nickolas Chen Wei Jay
+- Chen Wei Jay Nickolas 
 - Lim Xin Rou
 - Chu Cheng Qing
 
@@ -69,7 +69,7 @@ lib/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cropmaster.git
+   git clone https://github.com/NickolasChen04/cropmaster.git
    cd cropmaster
    ```
 
