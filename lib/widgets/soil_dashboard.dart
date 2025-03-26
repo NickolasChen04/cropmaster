@@ -62,13 +62,17 @@ class SoilDashboard extends StatelessWidget {
           isWarning: soilData['moistureWarning'],
           usePoppinsWithIconColor: true,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center, // Added for centering
+            crossAxisAlignment: CrossAxisAlignment.center, // Added for centering
             children: [
-              _buildCircularIndicator(
-                value: soilData['moisture'],
-                unit: '%',
-                progressColor: soilData['moistureWarning'] ? Colors.red : Colors.blue,
-                progressValue: soilData['moisture'] / 100.0,
-                idealRange: 'Ideal: 15-25%',
+              Center( // Wrapped with Center widget for proper alignment
+                child: _buildCircularIndicator(
+                  value: soilData['moisture'],
+                  unit: '%',
+                  progressColor: soilData['moistureWarning'] ? Colors.red : Colors.blue,
+                  progressValue: soilData['moisture'] / 100.0,
+                  idealRange: 'Ideal: 15-25%',
+                ),
               ),
               
               // Show warning message for low moisture
@@ -76,6 +80,7 @@ class SoilDashboard extends StatelessWidget {
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(12),
+                  margin: const EdgeInsets.only(top: 12), // Added margin for spacing
                   decoration: BoxDecoration(
                     color: Colors.red.shade50,
                     borderRadius: BorderRadius.circular(12),
@@ -119,7 +124,7 @@ class SoilDashboard extends StatelessWidget {
           'pH': 5.8,
           'pHStatus': 'Optimal',
           'pHWarning': false,
-          'moisture': 18.0,  // Changed to double
+          'moisture': 18.0,  
           'moistureStatus': 'Optimal',
           'moistureWarning': false,
         };
@@ -131,7 +136,7 @@ class SoilDashboard extends StatelessWidget {
           'pH': 7.1,
           'pHStatus': 'Warning',
           'pHWarning': true,
-          'moisture': 12.0,  // Changed to double
+          'moisture': 12.0,  
           'moistureStatus': 'Warning',
           'moistureWarning': true,
         };
@@ -144,7 +149,7 @@ class SoilDashboard extends StatelessWidget {
           'pH': 6.2,
           'pHStatus': 'Optimal',
           'pHWarning': false,
-          'moisture': 14.0,  // Changed to double
+          'moisture': 14.0,  
           'moistureStatus': 'Warning',
           'moistureWarning': true,
         };
