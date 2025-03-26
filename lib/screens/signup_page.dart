@@ -31,7 +31,7 @@ class _SignupPageState extends State<SignupPage> {
     
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
-      appBar: const CustomAppBar(title: 'FarmSmart'),
+      appBar: const CustomAppBar(title: 'CropMaster'),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: deviceSize.width * 0.06),

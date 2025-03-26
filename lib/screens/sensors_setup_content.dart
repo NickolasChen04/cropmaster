@@ -216,7 +216,7 @@ class _SensorsSetupContentState extends State<SensorsSetupContent> {
           
           // 没有传感器？
           const Text(
-            'Don\'t have sensors? No problem! You can still use FarmSmart with satellite and weather data.',
+            'Don\'t have sensors? No problem! You can still use CropMaster with satellite and weather data.',
             style: TextStyle(
               fontSize: 14,
               color: Color(0xFF718096),

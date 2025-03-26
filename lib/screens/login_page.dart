@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
     
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
-      appBar: const CustomAppBar(title: 'FarmSmart'),
+      appBar: const CustomAppBar(title: 'CropMaster'),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: deviceSize.width * 0.06),
@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Sign in to continue to FarmSmart',
+                  'Sign in to continue to CropMaster',
                   style: TextStyle(
                     fontSize: 14,
                     color: Color(0xFF718096),
