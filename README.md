@@ -109,22 +109,22 @@ lib/
 ## 📱 Screenshots
 
 ### Authentication
-![Login Screen](Screenshots/Login.png)
+<img src="Screenshots/Login.png" width="300" alt="Login Screen">
 
 ### Home Page
-![Home Page Overview](Screenshots/HomePage_0.png)
-![Today's Tasks](Screenshots/HomePage_Today'sTask.png)
+<img src="Screenshots/HomePage_0.png" width="300" alt="Home Page Overview">
+<img src="Screenshots/HomePage_Today'sTask.png" width="300" alt="Today's Tasks">
 
 ### Farm Setup Flow
-![Farm Setup Step 1](Screenshots/FarmSetup_0.png)
-![Farm Setup Step 2](Screenshots/FarmSetup_1.png)
-![Farm Setup Step 3](Screenshots/FarmSetup_2.png)
-![Farm Setup Step 4](Screenshots/FarmSetup_3.png)
+<img src="Screenshots/FarmSetup_0.png" width="300" alt="Farm Setup Step 1">
+<img src="Screenshots/FarmSetup_1.png" width="300" alt="Farm Setup Step 2">
+<img src="Screenshots/FarmSetup_2.png" width="300" alt="Farm Setup Step 3">
+<img src="Screenshots/FarmSetup_3.png" width="300" alt="Farm Setup Step 4">
 
 ### Farm Management
-![Satellite Farm View](Screenshots/SataliteFarmView.png)
-![Farm Details](Screenshots/FarmDetails.png)
-![AI Insights](Screenshots/AI_Insights.png)
+<img src="Screenshots/SataliteFarmView.png" width="300" alt="Satellite Farm View">
+<img src="Screenshots/FarmDetails.png" width="300" alt="Farm Details">
+<img src="Screenshots/AI_Insights.png" width="300" alt="AI Insights">
 
 ## 🔧 Configuration
 
