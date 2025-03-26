@@ -137,12 +137,22 @@ lib/
 
 ### Farm Management
 <table>
+#### Satalite view
 <tr>
 <td><img src="Screenshots/SataliteFarmView.png" width="300" alt="Satellite Farm View"></td>
-<td><img src="Screenshots/FarmDetails.png" width="300" alt="Farm Details"></td>
 </tr>
 <tr>
-<td><img src="Screenshots/AI_Insights.png" width="300" alt="AI Insights"></td>
+#### Farm Details
+<td><img src="Screenshots/FarmA_0.jpg" width="300" alt="Farm A"></td>
+<td><img src="Screenshots/FarmA_1.jpg" width="300" alt="Farm A"></td>
+</tr>
+<tr>
+<td><img src="Screenshots/FarmB_0.jpg" width="300" alt="Farm B"></td>
+<td><img src="Screenshots/FarmB_1.jpg" width="300" alt="Farm B"></td>
+</tr>
+<tr>
+<td><img src="Screenshots/FarmC_0.jpg" width="300" alt="Farm C"></td>
+<td><img src="Screenshots/FarmC_1.jpg" width="300" alt="Farm C"></td>
 </tr>
 </table>
 
