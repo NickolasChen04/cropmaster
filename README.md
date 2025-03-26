@@ -113,18 +113,18 @@ lib/
 
 ### Home Page
 ![Home Page Overview](Screenshots/HomePage_0.png)
-![Today's Tasks](screenshots/HomePage_Today'sTask.png)
+![Today's Tasks](Screenshots/HomePage_Today'sTask.png)
 
 ### Farm Setup Flow
-![Farm Setup Step 1](screenshots/FarmSetup_0.png)
-![Farm Setup Step 2](screenshots/FarmSetup_1.png)
-![Farm Setup Step 3](screenshots/FarmSetup_2.png)
-![Farm Setup Step 4](screenshots/FarmSetup_3.png)
+![Farm Setup Step 1](Screenshots/FarmSetup_0.png)
+![Farm Setup Step 2](Screenshots/FarmSetup_1.png)
+![Farm Setup Step 3](Screenshots/FarmSetup_2.png)
+![Farm Setup Step 4](Screenshots/FarmSetup_3.png)
 
 ### Farm Management
-![Satellite Farm View](screenshots/SataliteFarmView.png)
-![Farm Details](screenshots/FarmDetails.png)
-![AI Insights](screenshots/AI_Insights.png)
+![Satellite Farm View](Screenshots/SataliteFarmView.png)
+![Farm Details](Screenshots/FarmDetails.png)
+![AI Insights](Screenshots/AI_Insights.png)
 
 ## 🔧 Configuration
 
