@@ -136,7 +136,7 @@ lib/
 </table>
 
 ### Farm Management
-- Satalite view
+- Satallite view
 <table>
 <tr>
 <td><img src="Screenshots/SataliteFarmView.png" width="300" alt="Satellite Farm View"></td>
