@@ -1,6 +1,6 @@
-# FarmSmart 🌾
+# Crop Master 🌾
 
-A modern Flutter application designed to revolutionize farm management through smart technology and intuitive interfaces.
+A modern Flutter application designed to revolutionize farm management through smart technology and intuitive interfaces. Crop Master helps farmers optimize their crop yields and manage their farms more efficiently.
 
 ## 🌟 Features
 
@@ -69,8 +69,8 @@ lib/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/farmsmart.git
-   cd farmsmart
+   git clone https://github.com/yourusername/cropmaster.git
+   cd cropmaster
    ```
 
 2. Install Flutter dependencies:
@@ -154,20 +154,4 @@ The application can be configured through the following files:
 - `.env`: Environment variables
 - `lib/config/`: Application configuration
 
-## 🤝 Contributing
-
-We welcome contributions! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-### Development Guidelines
-
-- Follow the existing code style
-- Write meaningful commit messages
-- Add tests for new features
-- Update documentation as needed
 
